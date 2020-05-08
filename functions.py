@@ -303,9 +303,6 @@ def multibar_plot(bars, label_list, name, title, xlb, barWidth = 0.1):
         r2 = [x + barWidth*ps for x in r1]
         position_list.append(r2)
 
-    # Set Size of figure
-    plt.figure(figsize=(25,10))
-
     # Make the plot
     plt.bar(r1, bars[0], width=barWidth, edgecolor='white', label=label_list[0])
     
@@ -322,7 +319,7 @@ def multibar_plot(bars, label_list, name, title, xlb, barWidth = 0.1):
  
     # Create legend & Show graphic
     plt.legend(loc='best', bbox_to_anchor=(0.46, 0.0, 0.7 ,0.36)) #, fontsize='medium')
-    plt.title(label=title, fontweight='bold') #, fontsize='large')
+    plt.title(label=title, fontweight='bold', fontsize='large')
     plt.show()
 
 
@@ -515,19 +512,25 @@ def score_eval(y_test, y_pred):
     return score
 
 
-# In[12]:
+# In[5]:
 
 
 # Function #12
 # Function to print Heatmap
 
-def heatmap(correlation, name_savefig):
+def heatmap(correlation, name_savefig, cmap):
 
     # Create Correlation Heatmap for all values (with minimum value -1 for positive or negative correlation)
     # alternative cmaps: inferno, seismic, magma, icefire
     plt.figure(figsize=(20,20))
-    heatmap = sns.heatmap(correlation, vmin=-1, cmap="seismic", annot=True)
+    heatmap = sns.heatmap(correlation, vmin=-1, cmap=cmap, annot=True)
     
     # save figure
-    plt.savefig(name_savefig, transparent=True, dpi=200)        
+    plt.savefig(name_savefig, transparent=True, dpi=300)        
+
+
+# In[ ]:
+
+
+
 
