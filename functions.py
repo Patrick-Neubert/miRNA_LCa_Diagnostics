@@ -329,7 +329,7 @@ def multibar_plot(bars, label_list, name, title, xlb, barWidth = 0.1):
 # Function #7
 # Function for RandomSearchCV + printing results
 
-def random_searching(model, parameters, X_train, y_train, X_test, y_test):
+def random_searching(model, parameters, X_train, y_train, X_test, y_test, seed):
     
     # Perform Random search on the classifier using 'precision_micro' as the scoring method 
     #(micro = Calculate metrics globally by counting the total true positives, false negatives and false positives.)
