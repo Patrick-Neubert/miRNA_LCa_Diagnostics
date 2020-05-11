@@ -17,6 +17,9 @@ from IPython.display import Image
 from mlxtend.classifier import EnsembleVoteClassifier
 from mlxtend.classifier import StackingCVClassifier
 
+# SciPy
+from scipy.stats import normaltest
+
 # sklearn
 import sklearn
 
@@ -76,6 +79,7 @@ from yellowbrick.classifier import PrecisionRecallCurve
 from yellowbrick.classifier import ROCAUC
 
 # matplotlib
+import matplotlib
 import matplotlib.pyplot as plt
 
 # missingno
@@ -532,5 +536,26 @@ def heatmap(correlation, name_savefig, cmap):
 # In[ ]:
 
 
+# Function #13
+# Function to create a dictionary with a TOP_n list from e.g. TOP20 List for e.g. dataframe selection
 
+def TOP_n_from(TOP_n_dict, feature_top_list, n):
+    
+    # first copy the given list to leave it "untouched"
+    TOP_n = feature_top_list.copy()
+
+    # reverse the Features from Feature Selection Results list
+    TOP_n_rev = list(reversed(TOP_n))
+
+    # index how many or which features should be removed
+    to_be_removed = TOP_n_rev[0:20-n]
+
+    for tbr in to_be_removed:
+        TOP_n.remove(tbr)
+
+    # adding Rank to create Tuple List
+    TOP_n_rank = list(zip(TOP_n, list(range(1, n+1))))
+
+    # updating given dictionary
+    TOP_n_dict.update({"TOP%d" % n:TOP_n_rank})
 
