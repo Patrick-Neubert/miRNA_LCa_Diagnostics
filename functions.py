@@ -289,13 +289,13 @@ def top_model(dataframe, n=3):
         print(65*"-")
 
 
-# In[7]:
+# In[15]:
 
 
 # Function #6
 # Function for multibar plotting
 
-def multibar_plot(bars, label_list, name, title, xlb, barWidth = 0.1):
+def multibar_plot(bars, label_list, name, title, xlb, save_name, barWidth = 0.1, ):
     
     # gives an array with indeces of dataframe @ postion [0] in bars list
     r1 = np.arange(len(bars[0]))
@@ -324,6 +324,9 @@ def multibar_plot(bars, label_list, name, title, xlb, barWidth = 0.1):
     # Create legend & Show graphic
     plt.legend(loc='best', bbox_to_anchor=(0.46, 0.0, 0.7 ,0.36)) #, fontsize='medium')
     plt.title(label=title, fontweight='bold', fontsize='large')
+    
+    # Save figure and show
+    plt.savefig(save_name, transparent=True, dpi=300);
     plt.show()
 
 
