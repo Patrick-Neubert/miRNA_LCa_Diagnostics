@@ -5,7 +5,7 @@
 
 # **for project: "miRNA Biomarker for Lung Cancer Diagnostics - Selecting a test panel for patient classification -"**
 
-# In[ ]:
+# In[1]:
 
 
 # Import all Packages & Modules
@@ -101,7 +101,7 @@ import seaborn as sns
 import sys
 
 
-# In[1]:
+# In[2]:
 
 
 # Function #1
@@ -141,7 +141,7 @@ def feature_selection(results_dict, tree_clf, name_clf, X_train, y_train, n=20):
     return results_dict
 
 
-# In[2]:
+# In[3]:
 
 
 # Function #2
@@ -194,7 +194,7 @@ def rfe_selection(results_dict, non_tree_clf, nt_name_clf, X_train, y_train):
     return results_dict
 
 
-# In[3]:
+# In[4]:
 
 
 # Function #3
@@ -214,7 +214,7 @@ def dataframe_selection(results_fs, X_train):
     return X_new    
 
 
-# In[4]:
+# In[5]:
 
 
 # Function #4
@@ -250,7 +250,7 @@ def model_evaluation(results_dict, model_clf, name_model, X_train, y_train):
     return results_dict
 
 
-# In[5]:
+# In[6]:
 
 
 # Function #5
@@ -289,7 +289,7 @@ def top_model(dataframe, n=3):
         print(65*"-")
 
 
-# In[6]:
+# In[7]:
 
 
 # Function #6
@@ -327,7 +327,7 @@ def multibar_plot(bars, label_list, name, title, xlb, barWidth = 0.1):
     plt.show()
 
 
-# In[7]:
+# In[8]:
 
 
 # Function #7
@@ -383,7 +383,7 @@ def random_searching(model, parameters, X_train, y_train, X_test, y_test, seed):
     print(best_model)
 
 
-# In[8]:
+# In[9]:
 
 
 # Function #8
@@ -445,7 +445,7 @@ def grid_searching(results_dict, model, name_model, parameters, X_train, y_train
     print(best_model)
 
 
-# In[9]:
+# In[10]:
 
 
 # Function #9
@@ -459,7 +459,7 @@ def viz_summary(results_dict, metric):
     print(results_dict.T[metric].rank())
 
 
-# In[10]:
+# In[11]:
 
 
 # Function #10
@@ -495,7 +495,7 @@ def feature_reduce(results_reduction, model_reduction, name_list, feature_list, 
     return results_reduction
 
 
-# In[11]:
+# In[12]:
 
 
 # Function #11
@@ -516,7 +516,7 @@ def score_eval(y_test, y_pred):
     return score
 
 
-# In[5]:
+# In[13]:
 
 
 # Function #12
@@ -527,13 +527,13 @@ def heatmap(correlation, name_savefig, cmap):
     # Create Correlation Heatmap for all values (with minimum value -1 for positive or negative correlation)
     # alternative cmaps: inferno, seismic, magma, icefire
     plt.figure(figsize=(20,20))
-    heatmap = sns.heatmap(correlation, vmin=-1, cmap=cmap, annot=True)
+    heatmap = sns.heatmap(correlation, linewidths=0.5, vmin=-1, cmap=cmap, annot=True)
     
     # save figure
     plt.savefig(name_savefig, transparent=True, dpi=300)        
 
 
-# In[ ]:
+# In[14]:
 
 
 # Function #13
