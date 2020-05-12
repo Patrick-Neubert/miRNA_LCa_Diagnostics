@@ -5,35 +5,23 @@
 
 # Overview
 
----
-
 This repository contains the code, visualizations and presentations of my capstone project which was part of my professional training as Data Scientist at neuefische GmbH (https://www.neuefische.de/).
-
----
 
 # Abstract
 
 Lung cancer is the most prevalent cancer disease worldwide. The current standard diagnostics for lung cancer are X-ray imaging, sputum cytology and tissue samples (biopsy), which are inapplicable for early detection screenings. My project uses machine learning algorithms analyzing a panel of miRNA biomarkers in blood samples to classify patients into the groups "lung cancer", "non-tumor lung disease" and "control".
 
----
-
 # Data
 
 Hummingbird Diagnostics GmbH (https://www.hummingbird-diagnostics.com) uses liquid biopsy diagnostics (such as blood samples) to detect diseases based on highly disease-specific miRNA biomarkers. The data was kindly provided via neuefische GmbH and originally used for developping a biochip for lung cancer diagnostics, whereby only 10-20 miRNAs need to be tested.
-
----
 
 # Project goal and objectives
 
 The goal of this EDA project is to identify the 10-20 most important biomarkers for classification of patients, which achieve the best results for a chosen metric score.
 
----
-
 # Technologie Highlights
 
-Python / Pandas / scikit-learn / NumPy / Matplotlib / Seaborn / Feature Selection / Ensemble Methods 
-
----
+Python / Pandas / scikit-learn / NumPy / Matplotlib / Seaborn / Feature Selection / Ensemble Methods
 
 # Files and Folders
 
