@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Functions List
+# # Functions
 
 # **for project: "miRNA Biomarker for Lung Cancer Diagnostics - Selecting a test panel for patient classification -"**
+
+# ## Import Packages & Modules
 
 # In[1]:
 
@@ -100,6 +102,8 @@ import seaborn as sns
 # sys (enables to exit execution of code)
 import sys
 
+
+# ## Functions
 
 # In[2]:
 
@@ -289,7 +293,7 @@ def top_model(dataframe, n=3):
         print(65*"-")
 
 
-# In[15]:
+# In[17]:
 
 
 # Function #6
@@ -322,7 +326,7 @@ def multibar_plot(bars, label_list, name, title, xlb, save_name, barWidth = 0.1,
     plt.xticks([r + barWidth*(int((len(label_list))/2)) for r in range(len(bars[0]))], name)
  
     # Create legend & Show graphic
-    plt.legend(loc='best', bbox_to_anchor=(0.46, 0.0, 0.7 ,0.36)) #, fontsize='medium')
+    plt.legend(loc='lower center', ncol=int(len(bars)/2), bbox_to_anchor=(0.5, -0.5))
     plt.title(label=title, fontweight='bold', fontsize='large')
     
     # Save figure and show

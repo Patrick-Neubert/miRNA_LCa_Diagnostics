@@ -28,6 +28,8 @@ Python / Pandas / scikit-learn / NumPy / Matplotlib / Seaborn / Feature Selectio
 ### data 
 - Contains the Lung Cancer miRNA Expression Data and the additional Annotation Data from Hummingbird Diagnostics GmbH 
 - Contains a pickle file with intermediate results from model optimization with RandomizedSearch and GridSearchCV
+- Contains X_tbc_top20, X_tbc_top20_test, y_test, y_train dataframes from main notebook to be used in the outsourced 
+  RandomizedSearch and GridSearchCV notebook
 
 ### figures
 - Contains all figures used in the notebook or graphs ploted in the notebook
@@ -47,7 +49,8 @@ Python / Pandas / scikit-learn / NumPy / Matplotlib / Seaborn / Feature Selectio
 ### mirna_biomarker_for_lung_cancer_diagnostics.ipynb
 - notebook with Exploratory Data Analysis (EDA), python code, visualizations, literature research, documentation and project report
 
-
+### random_and_grid_search.ipynb
+- notebook with RandomizedSearch and GridSearchCV outsourced from main notebook to save time when re-computing. 
 
 
 
